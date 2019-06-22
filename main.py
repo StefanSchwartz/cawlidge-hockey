@@ -52,7 +52,7 @@ with open(outfile_name, 'w') as outfile:
         row_data.append(a_team)
         row_data.append(last_a_rating)
 
-        dr = (last_h_rating + 100) - last_a_rating
+        dr = (last_h_rating + 100) - last_a_rating   # TODO - make home-field advantage a property of the Sport class
         h_prob = calculate_expected_result(dr)
         a_prob = calculate_expected_result(-dr)
         row_data.insert(3, h_prob)
